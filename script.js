@@ -10,5 +10,13 @@ const personalMovieDB = {
     privat: false
 };
 
-alert("Один из последних просмотренных фильмов?");
-alert("На сколько оцените его?");
+const lastFilm = prompt("Один из последних просмотренных фильмов?");
+const filmRating = prompt("На сколько оцените его?");
+
+personalMovieDB.movies = {
+    lastFilm: filmRating
+}
+
+alert(personalMovieDB);
+
+
