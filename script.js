@@ -1,6 +1,6 @@
 'use strict'
 
-const numberOfFilms = "Сколько фильмов вы уже посмотрели";
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели", "");
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -10,13 +10,14 @@ const personalMovieDB = {
     privat: false
 };
 
-const lastFilm = prompt("Один из последних просмотренных фильмов?");
-const filmRating = prompt("На сколько оцените его?");
+const lastFilm = prompt("Один из последних просмотренных фильмов?", ""),
+      filmRating = +prompt("На сколько оцените его?", ""),
+      lastFilmTwo = prompt("Один из последних просмотренных фильмов?", ""),
+      filmRatingTwo = +prompt("На сколько оцените его?", "");
 
-personalMovieDB.movies = {
-    lastFilm: filmRating
-}
+personalMovieDB.movies[lastFilm] = filmRating;
+personalMovieDB.movies[lastFilmTwo] = filmRatingTwo;
 
-alert(personalMovieDB);
+console.log(personalMovieDB);
 
 
